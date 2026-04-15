@@ -1,3 +1,3 @@
-# sol2434343
+# test-git-sync
 
-A sample solution.
+Solution for testing the GitHub sync panel.
