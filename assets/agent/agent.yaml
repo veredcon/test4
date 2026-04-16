@@ -1,0 +1,22 @@
+name: invoice-approval-monitor
+display_name: Invoice Approval Monitor Agent
+description: Monitors invoice approvals, flags invoices >50K pending >3 days, generates weekly summaries.
+version: "1.0.0"
+runtime: python
+entrypoint: app/main.py
+
+env:
+  - name: USE_MOCK_DATA
+    default: "true"
+  - name: POLL_INTERVAL_HOURS
+    default: "6"
+  - name: AMOUNT_THRESHOLD
+    default: "50000"
+  - name: DAYS_THRESHOLD
+    default: "3"
+  - name: DATA_SOURCE_URL
+    default: ""
+  - name: CFO_EMAIL
+    default: ""
+  - name: AGENT_URL
+    default: "http://localhost:8080"
